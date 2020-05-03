@@ -1,4 +1,3 @@
-console.log("client side server tag")
 
 const weatherForm=document.querySelector('form')
 const search =document.querySelector('input')
