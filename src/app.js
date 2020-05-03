@@ -5,7 +5,7 @@ const geocode=require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app  = express()
-
+const port = process.env.PORT || 3000
 
 //Depine paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -96,8 +96,8 @@ app.get('/help/*',(req,res)=>{
          errorMessage:'Page not found.'
      })
  })
-app.listen(3000,()=>{
-    console.log('http://localhost:3000')
+app.listen(port,()=>{
+    console.log('http://localhost:port'+port)
 })  
 
  
