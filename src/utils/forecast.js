@@ -10,7 +10,7 @@ const forecast = (latitude,longitude,callback)=>{
             callback('Unable to find location',undefined)
         }
         else{
-            callback(undefined,"There is high chance of precipitation as temprature "+body.main.temp +"°C is quite high")
+            callback(undefined,"The temperature of "+location+" is "+body.main.temp +"°C ")
         }
     })
 }
