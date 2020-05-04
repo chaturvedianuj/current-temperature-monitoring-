@@ -97,7 +97,7 @@ app.get('/help/*',(req,res)=>{
      })
  })
 app.listen(Port,()=>{
-    console.log('http://localhost:port'+Port)
+    console.log('http://localhost:'+Port)
 })  
 
  
