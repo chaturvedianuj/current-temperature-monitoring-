@@ -10,12 +10,12 @@ const Port = process.env.PORT || 3000
 //Depine paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
-const partailsPath = path.join(__dirname,'../templates/partials')
+const partialsPath = path.join(__dirname,'../templates/partials')
 
 //setup handlebars engine and views location
 app.set('view engine','hbs')
 app.set('views',viewsPath)
-hbs.registerPartials(partailsPath)
+hbs.registerPartials(partialsPath)
 
 
 //setup static directory to serve
@@ -25,14 +25,14 @@ app.use(express.static(publicDirectoryPath))
 //to add functionalities
 app.get('',(req,res)=>{
     res.render('index',{
-        tittle:'Weather',
+        title:'Weather',
         name:'Anuj Chaturvedi'
     })
 })
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        tittle:'About Me',
+        title:'About Me',
         name:'Anuj Chaturvedi'
     })
 })
@@ -64,7 +64,7 @@ app.get('/weather',(req,res)=>{
             res.send({
                 forecast:forecastData,
                 location,
-                place:req.query.address
+                address:req.query.address
             })
         })
     })    
